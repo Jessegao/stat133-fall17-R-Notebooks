@@ -1,0 +1,93 @@
+---
+title: "Warmup 01"
+author: "Jesse Gao"
+date: "September 9, 2017"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Cooking Recipe
+##Butter Chicken
+
+original recipe [link](https://cooking.nytimes.com/recipes/1016754-butter-chicken?mcubz=3)
+
+##Ingredients
+* 1 ?? cups full-fat Greek yogurt
+* 2 tablespoons lemon juice
+* 1 ?? tablespoons ground turmeric
+* 2 tablespoons garam masala
+* 2 tablespoons ground cumin
+* 3 pounds chicken thighs, on the bone
+* ?? pound unsalted butter
+* 4 teaspoons neutral oil, like vegetable or canola oil
+* 2 medium-size yellow onions, peeled and diced
+* 4 cloves garlic, peeled and minced
+* 3 tablespoons fresh ginger, peeled and grated or finely diced
+* 1 tablespoon cumin seeds
+* 1 cinnamon stick
+* 2 medium-size tomatoes, diced
+* 2 red chiles, like Anaheim, or 1 jalape??o pepper, seeded and diced
+*  Kosher salt to taste
+* ??? cup chicken stock, low-sodium or homemade
+* 1 ?? cups cream
+* 1 ?? teaspoons tomato paste
+* 3 tablespoons ground almonds, or finely chopped almonds
+* ?? bunch cilantro leaves, stems removed.
+
+##Tools
+* Large chef's knife
+* Mixing bowl
+* Pan
+
+##Instructions
+1. Whisk together the yogurt, lemon juice, turmeric, garam masala and cumin in a large bowl. Put the chicken in, and coat with the marinade. Cover, and refrigerate (for up to a day).
+2. In a large pan over medium heat, melt the butter in the oil until it starts to foam. Add the onions, and cook, stirring frequently, until translucent. Add the garlic, ginger and cumin seeds, and cook until the onions start to brown.
+3. Add the cinnamon stick, tomatoes, chiles and salt, and cook until the chiles are soft, about 10 minutes.
+4. Add the chicken and marinade to the pan, and cook for 5 minutes, then add the chicken stock. Bring the mixture to a boil, then lower the heat and simmer, uncovered, for approximately 30 minutes.
+5. Stir in the cream and tomato paste, and simmer until the chicken is cooked through, approximately 10 to 15 minutes.
+Add the almonds, cook for an additional 5 minutes and remove from the heat. Garnish with the cilantro leaves.
+
+##How it should look like
+![Delicious!](https://static01.nyt.com/images/2014/08/24/magazine/24eat/mag-24Eat-t_CA0-articleLarge.jpg)
+
+###Q&A
+
+*When to use the recipe?*
+**Anytime! It's good for all meals of the day.**
+
+*Is there a special season of the year for it?*
+**Nope**
+
+*Are there variations of the recipe?*
+**There are hundreds of ways to make this. This recipe is my favorite**
+
+My friend gave me this recipe: 
+> "tastes good man" - friend
+
+##Table of food that is good
+| Good?         | Food           |
+| ------------- |:-------------:|
+| good      | Butter Chicken |
+| bad      | ???      |
+
+#Quadratic Equation
+In algebra, a quadratic equation (from the Latin quadratus for "square") is any equation having the form:
+
+> $ax^2 + bx + c = 0$
+
+where x represents an unknown, and a, b, and c represent known numbers such that a is not equal to 0. If a = 0, then the equation is linear, not quadratic. The numbers a, b, and c are the coefficients of the equation, and may be distinguished by calling them, respectively, the quadratic coefficient, the linear coefficient and the constant or free term.
+
+#quadratic formula 
+
+$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$
+
+#Comments and Reflections
+1. Stuff was easy
+2. programming was easy 
+3. this is my first time, language is great
+4. I didn't need help
+5. It took an hour
+6. the equations part
