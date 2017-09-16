@@ -1,0 +1,50 @@
+---
+title: "up02-jesse-gao.Rmd"
+author: "Jesse Gao"
+date: "September 15, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+#Exploratory Data Analysis
+```{r}
+# load the objects
+load("./data/nba2017-salary-points.RData")
+
+# list the available objects
+ls()
+```
+##Quantitative Variable
+```{r}
+summary(salary)
+sort(table(salary), decreasing = TRUE)[1:3]
+max(salary) - min(salary)
+hist(salary)
+boxplot(salary)
+```
+
+The typical values for salary are 543471, 874636, and 1015696
+
+The spread is 20958305
+
+Most of the players get paid less than 10 million
+
+##Qualitative variable
+```{r}
+summary(team)
+teamfactor = factor(team)
+table(team)
+freq = prop.table(table(team))
+barplot(freq)
+```
+
+It looks like most of the teams have the same number of people.
+```{r}
+
+```
+
+```{r}
+
+```
