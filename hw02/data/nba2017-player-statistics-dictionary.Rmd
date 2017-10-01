@@ -1,3 +1,7 @@
+---
+output: github_document
+---
+
 #Data Dictionary
 
 ##NBA Players Statistics
