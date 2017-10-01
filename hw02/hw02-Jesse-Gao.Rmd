@@ -1,0 +1,71 @@
+---
+title: "hw02-Jesse-Gao"
+author: "Jesse Gao"
+date: "September 30, 2017"
+output: github_document
+---
+
+##1) Create a data dictionary
+
+see data dictionary file
+
+
+##2) Import the data in R
+
+```{r}
+dat = read.csv("./data/nba2017-player-statistics.csv", colClasses = c("character", "character", "factor", "character", "double", rep("integer", 19)))
+str(dat)
+```
+
+```{r}
+library(readr)
+datr = read_csv("./data/nba2017-player-statistics.csv", col_types = cols(Player = col_character(), Team = col_character(), Position = col_factor(levels = c('C', 'PF', 'PG',
+'SF', 'SG')), Experience = col_character(), Salary = col_double()))
+str(datr)
+```
+
+##3) Right after importing the data
+```{r}
+dat$Experience = as.integer(replace(dat$Experience, dat$Experience == "R", "0"))
+str(dat)
+```
+
+##4) Performance of players
+```{r}
+PTS = 1 * (dat$FGM - dat$Points3 - dat$Points2 + dat$FTM) + 2*dat$Points2 + 3*dat$Points3
+REB = dat$OREB + dat$DREB
+Missed_FG = dat$FGA - dat$FGM
+Missed_FT = dat$FTA - dat$FTM
+dat$EFF =  (PTS + REB + dat$AST + dat$STL + dat$BLK - Missed_FG - Missed_FT - dat$TO) / dat$GP
+summary(dat$EFF)
+library(ggplot2)
+library(dplyr)
+hist(x = dat$EFF, main = "Histogram of Efficiency (EFF)", xlab = "EFF")
+select(slice(arrange(dat, desc(EFF)), 1:10), Player, Team, Salary, EFF)
+select(filter(dat, EFF < 0), Player)
+#barplotinfo$vars = c(PTS,REB,dat$AST,dat$STL,dat$BLK,Missed_FG,Missed_FT,dat$TO)
+
+#  mapply(cor, c(PTS,REB,dat$AST,dat$STL,dat$BLK,Missed_FG,Missed_FT,dat$TO), c(rep(dat$EFF, 8)))
+barplotinfo = c(PTS = cor(PTS, dat$EFF), REB= cor(REB, dat$EFF), AST = cor(dat$AST, dat$EFF), STL = cor(dat$STL, dat$EFF), BLK = cor(dat$BLK, dat$EFF), Missed_FG = cor(-Missed_FG, dat$EFF), Missed_FT = cor(-Missed_FT, dat$EFF), TO = cor(-dat$TO, dat$EFF))
+barplot(sort(barplotinfo, decreasing = TRUE), ylim = c(-1, 1), cex.names = .7, main = "Correlations between Player Stats and EFF")
+```
+
+##5) Efficiency and Salary
+
+```{r}
+ggplot(data = dat, aes(x = EFF, y = Salary)) + geom_point() + geom_smooth(method = "loess")
+cor(dat$EFF, dat$Salary)
+```
+It appears that as the efficiency goes up, so does the salary. They appear to have a positive linear relationship.
+
+```{r}
+players2 = filter(dat, dat$MIN/dat$GP >= 20)
+ggplot(data = players2, aes(x = EFF, y = Salary)) + geom_point() + geom_smooth(method = "loess")
+cor(players2$EFF, players2$Salary)
+```
+The two variables seems to be less positively correlated, and the salary doesn't always seem to be increasing with increasing efficiency.
+##6) Comments and Reflections
+
+The barplot part was the only place that messed me up a little because I kept on making small mistakes. Other than that, this hw was pretty fun, especially making the graphs appear.
+Once again, Google was pretty much the only resource I used.
+The most frustrating part was probably the readr, I still have no idea why anyone would use that package. It's like the base read but more verbose and easier to make errors with.
