@@ -244,6 +244,15 @@ barplot(sort(barplotinfo, decreasing = TRUE), ylim = c(-1, 1), cex.names = .7, m
 
 ![](hw02-Jesse-Gao_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-4-2.png)
 
+``` r
+barplotinfo
+```
+
+    ##        PTS        REB        AST        STL        BLK  Missed_FG 
+    ##  0.8588644  0.7634501  0.6689232  0.6957286  0.5679571 -0.7722477 
+    ##  Missed_FT         TO 
+    ## -0.7271456 -0.8003289
+
 5) Efficiency and Salary
 ------------------------
 

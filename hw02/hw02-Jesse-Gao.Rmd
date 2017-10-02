@@ -48,6 +48,7 @@ select(filter(dat, EFF < 0), Player)
 #  mapply(cor, c(PTS,REB,dat$AST,dat$STL,dat$BLK,Missed_FG,Missed_FT,dat$TO), c(rep(dat$EFF, 8)))
 barplotinfo = c(PTS = cor(PTS, dat$EFF), REB= cor(REB, dat$EFF), AST = cor(dat$AST, dat$EFF), STL = cor(dat$STL, dat$EFF), BLK = cor(dat$BLK, dat$EFF), Missed_FG = cor(-Missed_FG, dat$EFF), Missed_FT = cor(-Missed_FT, dat$EFF), TO = cor(-dat$TO, dat$EFF))
 barplot(sort(barplotinfo, decreasing = TRUE), ylim = c(-1, 1), cex.names = .7, main = "Correlations between Player Stats and EFF")
+barplotinfo
 ```
 
 ##5) Efficiency and Salary
