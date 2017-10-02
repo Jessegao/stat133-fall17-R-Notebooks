@@ -283,6 +283,9 @@ cor(players2$EFF, players2$Salary)
 
     ## [1] 0.5367224
 
-The two variables seems to be less positively correlated, and the salary doesn't always seem to be increasing with increasing efficiency. \#\#6) Comments and Reflections
+The two variables seems to be less positively correlated, and the salary doesn't always seem to be increasing with increasing efficiency.
+
+6) Comments and Reflections
+---------------------------
 
 The barplot part was the only place that messed me up a little because I kept on making small mistakes. Other than that, this hw was pretty fun, especially making the graphs appear. Once again, Google was pretty much the only resource I used. The most frustrating part was probably the readr, I still have no idea why anyone would use that package. It's like the base read but more verbose and easier to make errors with.

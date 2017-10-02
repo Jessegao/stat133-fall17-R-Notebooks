@@ -57,6 +57,7 @@ barplotinfo
 ggplot(data = dat, aes(x = EFF, y = Salary)) + geom_point() + geom_smooth(method = "loess")
 cor(dat$EFF, dat$Salary)
 ```
+
 It appears that as the efficiency goes up, so does the salary. They appear to have a positive linear relationship.
 
 ```{r}
@@ -65,6 +66,7 @@ ggplot(data = players2, aes(x = EFF, y = Salary)) + geom_point() + geom_smooth(m
 cor(players2$EFF, players2$Salary)
 ```
 The two variables seems to be less positively correlated, and the salary doesn't always seem to be increasing with increasing efficiency.
+
 ##6) Comments and Reflections
 
 The barplot part was the only place that messed me up a little because I kept on making small mistakes. Other than that, this hw was pretty fun, especially making the graphs appear.
