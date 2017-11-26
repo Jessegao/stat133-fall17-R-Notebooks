@@ -242,7 +242,7 @@ summary_stats = function(v) {
 # Output: printed statements
 print_stats = function(stats){
   maxNameLength = 9
-  formatedNames = c("minimum  :",
+  formatedNames = c(" minimum  :",
                     "percent10:",
                     "quartile1:",
                     "median   :",
@@ -254,11 +254,12 @@ print_stats = function(stats){
                     "stdev    :",
                     "missing  :")
   values = unlist(stats, use.names = FALSE)
-  values = format(round(values, digits = 4), nsmall = 4)
-  both = paste(formatedNames, values, sep = ' ')
-  for(i in both) {
-    print(i)
-  }
+  #values = format(values, nsmall = 4)
+  cat(sprintf("%-9s %.4f\n", formatedNames, values))
+  #both = paste(formatedNames, values, sep = ' ')
+  #for(i in both) {
+  #  print(i)
+  #}
 }
 # Drop Lowest
 # Arguments: numeric vector v
@@ -267,7 +268,7 @@ print_stats = function(stats){
 drop_lowest = function(v) {
   min = get_minimum(v, na.rm = FALSE)
   for (i in 1:length(v)) {
-    if(is.na(v[i]) || v[i] == min) {
+    if(is.na(v[i]) | v[i] == min) {
       return(v[-i])
     }
      
@@ -321,7 +322,7 @@ score_quiz = function (v, drop) {
 # Description: uses a table to compute lab scores
 # Output: numeric value
 score_lab = function(value) {
-  if (value == 11 | value == 12) {
+  if ((value == 11) | (value == 12)) {
     return(100)
   }
   else if (value == 10) {

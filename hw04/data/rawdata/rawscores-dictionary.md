@@ -5,7 +5,7 @@ Data Dictionary
 Raw Scores
 ----------------------
 
-### Discription
+### Description
 
 This has all the raw scores for students. It contains:
 
