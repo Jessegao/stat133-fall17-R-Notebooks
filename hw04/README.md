@@ -18,10 +18,10 @@ http://www.r-tutor.com/elementary-statistics/numerical-measures/quartile
 https://stackoverflow.com/questions/3443687/formatting-decimal-places-in-r
 
 ## Comments and Reflections:
-This was not my first time writing tests so it was very intuitive
-However, ggvis was a nightmare to work with. It is a 8 on the scale of confusing.
-Conditional panels were easy.
-I like ggplot the most. base plot was alright and ggvis was like ggplot but bad. Syntactically.
-One of the gsi's helped me but I can't remember her name
-Took me around 15 hours to complete
-Much of the time spent on this project was on sorting out the data and figuring out what to do with ggvis. 
+- This was not my first time writing tests so it was very intuitive
+- However, ggvis was a nightmare to work with. It is a 8 on the scale of confusing.
+- Conditional panels were easy.
+- I like ggplot the most. base plot was alright and ggvis was like ggplot but bad. Syntactically.
+- One of the gsi's helped me but I can't remember her name
+- Took me around 15 hours to complete
+- Much of the time spent on this project was on sorting out the data and figuring out what to do with ggvis. 
