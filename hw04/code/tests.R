@@ -17,17 +17,17 @@ expect_equal(remove_missing(v1), (v1))
 
 # Testing get_minimum
 context("Testing get_minimum")
-expect_equal(get_minimum(v4, T), 2)
-expect_equal(get_minimum(v3, T), -5)
-expect_equal(get_minimum(v2, F), as.double(NA))
-expect_equal(get_minimum(v1, T), 1)
+expect_equal(get_minimum(v4, T), min(v4, na.rm = T))
+expect_equal(get_minimum(v3, T), min(v3, na.rm = T))
+expect_equal(get_minimum(v2, F), min(v2, na.rm = F))
+expect_equal(get_minimum(v1, T), min(v1, na.rm = T))
 
 # Testing get_maximum
 context("Testing get_maximum")
-expect_equal(get_maximum(v4, T), 8)
-expect_equal(get_maximum(v3, F), 7)
-expect_equal(get_maximum(v2, T), 10)
-expect_equal(get_maximum(v1, T), 5)
+expect_equal(get_maximum(v4, T), max(v4, na.rm = T))
+expect_equal(get_maximum(v3, F), max(v3, na.rm = F))
+expect_equal(get_maximum(v2, T), max(v2, na.rm = T))
+expect_equal(get_maximum(v1, T), max(v1, na.rm = T))
 
 # Testing get_range
 context("Testing get_range")
