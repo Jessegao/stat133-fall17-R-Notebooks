@@ -18,6 +18,14 @@ for (i in 1:ncol(dat)) {
 }
 sink()
 
+sink(file = '../output/summary-cleanscores.txt')
+str(dat)
+for (i in 1:ncol(dat)) {
+  summary = summary_stats(dat[,i])
+  print_stats(summary)
+}
+sink()
+
 for (i in 1:ncol(dat)) {
   dat[is.na(dat[,i]),i] = 0
 }
